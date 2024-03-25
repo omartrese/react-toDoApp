@@ -1,5 +1,5 @@
 import './App.css'
-import Form from './components/Form'
+import TodoCrud from './components/TodoCrud'
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
           <h2 className='text-2xl'>by Omar Layachi Mahboub</h2>
         </header>
 
-        <Form />
+        <TodoCrud />
 
         <footer className='hidden sm:absolute sm:flex w-full bottom-0 justify-around bg-gray-900 text-2xl p-2'>
           <h3>Todo App</h3>
