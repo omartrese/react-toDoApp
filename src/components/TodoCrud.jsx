@@ -15,26 +15,26 @@ function TodoCrud() {
 
   const addTask = (e) => {
     e.preventDefault();
-    if(!title) return;
+    if (!title || !title.trim()) return;
 
-    const newTask = {title, id: tasks.length};
+    const newTask = { title, id: tasks.length };
     setTasks(prevTasks => [...prevTasks, newTask]);
 
     setTitle('');
   }
 
-  const tasksComponents = tasks.map(task => 
-    <li key={task.id}>
-      <Task title={task.title} desc={task.desc} />
+  const tasksComponents = tasks.map(task =>
+    <li className="flex justify-center" key={task.id}>
+      <Task title={task.title} />
     </li>
   );
 
   return (
     <div>
       <form className="flex flex-row justify-center">
-        <input type="text" name="title" placeholder="Title" onChange={handleChange} value={title} autoComplete="off"  className="text-2xl rounded-sm" />
+        <input type="text" name="title" placeholder="Title" onChange={handleChange} value={title} maxLength={16} autoComplete="off" className="text-2xl p-1 w-60 mx-4 rounded-md bg-contrast" required/>
         {/* <input type="text" name="desc" placeholder="Description" onChange={handleChange} value={desc} autoComplete="off" /> */}
-        <button type="submit" onClick={addTask}>
+        <button type="submit" onClick={addTask} className="rounded-md mx-4 p-2 bg-complement scale-100 transition duration-75 hover:scale-110 active:scale-90">
           <Add />
         </button>
       </form>

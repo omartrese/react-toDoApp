@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <div>
-        <header className='flex flex-col items-center p-8 text-center font-bold'>
+        <header className='flex flex-col items-center p-6 pb-10 text-center font-bold' >
           <h1 className='m-2 text-5xl'>Todo App</h1>
           <h2 className='text-2xl'>by Omar Layachi Mahboub</h2>
         </header>
