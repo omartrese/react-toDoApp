@@ -24,7 +24,7 @@ function TodoCrud() {
   }
 
   const tasksComponents = tasks.map(task =>
-    <li className="flex justify-center" key={task.id}>
+    <li className="flex justify-center items-center" key={task.id}>
       <Task title={task.title} />
     </li>
   );
@@ -32,7 +32,7 @@ function TodoCrud() {
   return (
     <div>
       <form className="flex flex-row justify-center">
-        <input type="text" name="title" placeholder="Title" onChange={handleChange} value={title} maxLength={16} autoComplete="off" className="text-2xl p-1 w-60 mx-4 rounded-md bg-contrast" required/>
+        <input type="text" name="title" placeholder="Title" onChange={handleChange} value={title} maxLength={14} autoComplete="off" className="text-2xl p-1 w-60 mx-4 rounded-md bg-contrast" required/>
         {/* <input type="text" name="desc" placeholder="Description" onChange={handleChange} value={desc} autoComplete="off" /> */}
         <button type="submit" onClick={addTask} className="rounded-md mx-4 p-2 bg-complement scale-100 transition duration-75 hover:scale-110 active:scale-90">
           <Add />

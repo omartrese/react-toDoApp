@@ -1,19 +1,20 @@
-import Tick from "./Tick";
-import Trash from "./Trash";
-
 /* eslint-disable react/prop-types */
+import Trash from "./Trash"
+import Tick from "./Tick"
+
 function Task(props) {
   return (
-    <div className="flex flex-row justify-center items-center w-3/4 bg-slate-600 my-10">
-      <button type="button">
+    <div className="flex flex-row justify-around items-center my-10 bg-slate-600">
+
+      <button className="bg-red-600 p-1 rounded-md scale-100 transition duration-75 hover:scale-110 active:scale-90" type="button">
         <Trash />
       </button>
 
-      <div className="w-task mx-6 py-2 px-1 text-center text-2xl rounded-md bg-complement">
+      <div className="w-56 text-center text-2xl bg-complement mx-5 p-3 rounded-md">
         <h1>{props.title}</h1>
       </div>
 
-      <button type="button">
+      <button className="bg-green-600 p-1 rounded-md scale-100 transition duration-75 hover:scale-110 active:scale-90" type="button">
         <Tick />
       </button>
     </div>

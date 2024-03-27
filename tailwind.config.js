@@ -8,13 +8,9 @@ export default {
     colors: {
       'contrast': '#333333',
       'complement': '#5a606b',
-    },
-
-    extend : {
-      width: {
-        'task': '470px',
-      }
-    }
+      'green-600':  'rgb(101 163 13)',
+      'red-600': 'rgb(220 38 38)',
+    }, 
   },
   plugins: [],
 }
