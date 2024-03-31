@@ -6,7 +6,7 @@ Made with `React` + `Vite`.
 
 Using of [localStorage API](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage) to store all tasks and their statuses in browser memory.
 
-Using of TailwindCSS for all app Styles.
+Using of [TailwindCSS](https://tailwindcss.com/) for all app Styles.
 
 
 # Set-Up Development Environment
