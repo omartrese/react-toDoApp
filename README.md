@@ -3,7 +3,9 @@
 A minimalist todo App where you can create, read, mark as complete and delete tasks.
 
 Made with `React` + `Vite`.
-Using of localStorage API to store all tasks and their statuses in browser memory.
+
+Using of [localStorage API](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage) to store all tasks and their statuses in browser memory.
+
 Using of TailwindCSS for all app Styles.
 
 
