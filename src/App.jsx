@@ -7,7 +7,7 @@ function App() {
       <div>
         <header className='flex flex-col items-center p-6 pb-10 text-center font-bold' >
           <h1 className='m-2 text-5xl'>Todo App</h1>
-          <h2 className='text-2xl'>by Omar Layachi Mahboub</h2>
+          <h2 className='text-2xl'>by Ody</h2>
         </header>
 
         <TodoCrud />
