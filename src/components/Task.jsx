@@ -10,7 +10,7 @@ function Task(props) {
         <Trash />
       </button>
 
-      <div className={`w-56 text-center text-2xl bg-complement mx-5 p-3 rounded-md ${props.completed ? 'line-through' : ''}`}>
+      <div className={`w-56 text-center text-2xl bg-complement mx-5 p-3 rounded-md ${props.completed ? 'line-through opacity-25' : ''}`}>
         <h1>{props.title}</h1>
       </div>
 

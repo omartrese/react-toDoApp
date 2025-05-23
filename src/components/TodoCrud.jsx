@@ -6,10 +6,18 @@ function TodoCrud() {
   const [title, setTitle] = useState("");
   // const [desc, setDesc] = useState("");
   const [tasks, setTasks] = useState(() => JSON.parse(localStorage.getItem('tasks')) || []);
+  const [nextId, setNextId] = useState(() => {
+    const saved = localStorage.getItem('nextId');
+    return saved ? JSON.parse(saved) : 0;
+  });
 
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }, [tasks]);
+
+  useEffect(() => {
+    localStorage.setItem('nextId', JSON.stringify(nextId));
+  }, [nextId]);
 
   const handleChange = (e) => setTitle(e.target.value);
 
@@ -17,8 +25,9 @@ function TodoCrud() {
     e.preventDefault();
     if (!title || !title.trim()) return;
 
-    const newTask = { title, id: tasks.length, completed: false };
+    const newTask = { title, id: nextId, completed: false };
     setTasks(prevTasks => [...prevTasks, newTask]);
+    setNextId(prevId => prevId + 1);
 
     setTitle('');
   }
